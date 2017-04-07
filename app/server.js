@@ -102,6 +102,7 @@ export function postComment(feedItemId, author, contents, cb) {
   // document in the database.
   var feedItem = readDocument('feedItems', feedItemId);
   feedItem.comments.push({
+    "likeCounter": [],
     "author": author,
     "contents": contents,
     "postDate": new Date().getTime()
